@@ -1,5 +1,5 @@
 import json
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django.db.utils import IntegrityError
@@ -16,7 +16,7 @@ def genre_view(request):
             for genre in genres
         ]
         return JsonResponse(data, safe=False)
-    elif request.method == "POST":
+    if request.method == "POST":
         try:
             data = json.loads(request.body.decode("utf-8"))
         except json.JSONDecodeError:
@@ -89,7 +89,7 @@ def genre_detail(request, pk):
     if request.method == "GET":
         data = {"id": genre.pk, "name": genre.name, "date_created": genre.date_created}
         return JsonResponse(data=data)
-    elif request.method == "PUT":
+    if request.method == "PUT":
         try:
             data = json.loads(request.body.decode("utf-8"))
         except json.JSONDecodeError:
@@ -144,7 +144,7 @@ def genre_detail(request, pk):
             },
             status=200,
         )
-    elif request.method == "DELETE":
+    if request.method == "DELETE":
         genre.delete()
         return JsonResponse(
             data={
