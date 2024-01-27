@@ -21,13 +21,13 @@ Se por algum motivo você que está lendo deseja aproveitar algum conceito desse
 1 - Clone o projeto:
 
 ```bash
-    git clone https://github.com/FelipeFranke5/django_generos_api
+git clone https://github.com/FelipeFranke5/django_generos_api
 ```
 
 2 - Entre na pasta do projeto:
 
 ```bash
-    cd django_generos_api
+cd django_generos_api
 ```
 
 3 - Crie a venv:
@@ -35,13 +35,13 @@ Se por algum motivo você que está lendo deseja aproveitar algum conceito desse
 Linux:
 
 ```bash
-    python3 -m venv .venv
+python3 -m venv .venv
 ```
 
 Windows:
 
 ```bash
-    python -m venv .venv
+python -m venv .venv
 ```
 
 4 - Ative a venv:
@@ -49,19 +49,19 @@ Windows:
 Linux:
 
 ```bash
-    source .venv/bin/activate
+source .venv/bin/activate
 ```
 
 Windows:
 
 ```bash
-    .venv\Scripts\activate
+.venv\Scripts\activate
 ```
 
 5 - Instale as dependências:
 
 ```bash
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Pronto! O projeto estará à sua disposição, conforme a convenção da documentação oficial do Django:
